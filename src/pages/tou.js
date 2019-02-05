@@ -1,12 +1,16 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import { graphql } from 'gatsby';
 
-export default () => (
+export default ({ data }) => (
   <section>
     <Link to="/">Close</Link>
-    <h2>Tearms of Use</h2>
-    <h3>Videos After Dark Library</h3>
-    <p>Last Updated: November 15, 2014</p>
+    <h2>{data.tou.title}</h2>
+    {/* Terms of Use */}
+    <h3>{data.tou.subtitle}</h3>
+    {/* Videos After Dark Library */}
+    {data.tou.body}
+    {/* <p>Last Updated: November 15, 2014</p>
     <p>
       A. THE SERVICES; AUTHORIZATION TO USE:
       <br /> Please read these terms and policies (referred to herein as “Terms
@@ -30,6 +34,16 @@ export default () => (
       Terms of Use shall be deemed to confer any third-party rights or benefits.
       These Terms of Use apply to all users of the Service, including users who
       are also contributors of Content (as hereinafter defined) on the Service.
-    </p>
+    </p> */}
   </section>
 );
+
+export const query = graphql`
+  query {
+    tou {
+      title
+      subtitle
+      body
+    }
+  }
+`;

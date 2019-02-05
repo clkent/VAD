@@ -1,12 +1,18 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import { graphql } from 'gatsby';
 
-export default () => (
+export default ({ data }) => (
   <section>
     <Link to="/">Close</Link>
-    <h2>Privacy Statement</h2>
-    <h3>Privacy Policy</h3>
-    <p>Last Updated: November 15, 2014</p>
+    <h2>{data.privacy.title}</h2>
+    {/* Privacy Statement */}
+    <h3>{data.privacy.subtitle}</h3>
+    {/* Privacy Policy */}
+
+    {data.privacy.body}
+
+    {/* <p>Last Updated: November 15, 2014</p>
     <p>
       Thank you for visiting the America’s Funniest Home Videos website,
       AFV.com. AFV.com provides a unique way to keep in touch with America’s
@@ -26,6 +32,16 @@ export default () => (
       users (“Users”) and others who access this Website. Please read this
       Privacy Policy as well as our Terms of Use before browsing or using the
       Website.
-    </p>
+    </p> */}
   </section>
 );
+
+export const query = graphql`
+  query {
+    privacy {
+      title
+      subtitle
+      body
+    }
+  }
+`;

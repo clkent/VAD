@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import { graphql } from 'gatsby';
 
 import MainNav from '../components/mainNav';
 import Footer from '../components/footer';
 
-export default () => (
+export default ({ data }) => (
   <>
     <main className="top" role="main">
       <MainNav />
@@ -15,14 +16,23 @@ export default () => (
     </main>
 
     <div>
-      <h1>Bob Saget is back</h1>
-      <p>
-        The producers of “America’s Funniest Home Videos” have created the new
+      <h1>{data.index.title}</h1>
+      {/* Bob Saget is back */}
+      {data.index.body}
+      {/* The producers of “America’s Funniest Home Videos” have created the new
         comedy reality series “Videos After Dark” hosted by comedian Bob Saget
-        and featuring home videos with an edgier twist.
-      </p>
+        and featuring home videos with an edgier twist. */}
     </div>
 
     <Footer />
   </>
 );
+
+export const query = graphql`
+  query {
+    index {
+      title
+      body
+    }
+  }
+`;

@@ -9,7 +9,7 @@ export default ({ data }) => (
     {/* Terms of Use */}
     <h3>{data.datoCmsTou.subtitle}</h3>
     {/* Videos After Dark Library */}
-    {data.tou.body}
+    {data.datoCmsTou.body}
   </section>
 );
 

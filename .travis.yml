@@ -18,6 +18,15 @@ before_script:
 script:
   - gatsby build
 
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN # Set in the settings page of your repository, as a secure variable
+  keep-history: true
+  local-dir: public
+  on:
+    branch: master
+
 notifications:
   webhooks:
     - https://webhooks.datocms.com/FnPF9L4Ooi/deploy-results

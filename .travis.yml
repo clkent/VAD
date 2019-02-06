@@ -12,6 +12,9 @@ before_script:
 - npm i -g gatsby-cli
 script:
 - gatsby build
+notifications:
+  webhooks:
+    - https://webhooks.datocms.com/FnPF9L4Ooi/deploy-results
 deploy:
 provider: heroku
   api_key:
@@ -19,6 +22,3 @@ provider: heroku
   app: afv-vad
   on:
     repo: clkent/VAD
-notifications:
-  webhooks:
-    - https://webhooks.datocms.com/FnPF9L4Ooi/deploy-results

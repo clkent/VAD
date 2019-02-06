@@ -5,12 +5,12 @@ import { graphql } from 'gatsby';
 export default ({ data }) => (
   <section>
     <Link to="/">Close</Link>
-    <h2>{data.privacy.title}</h2>
+    <h2>{data.datoCmsPrivacy.title}</h2>
     {/* Privacy Statement */}
-    <h3>{data.privacy.subtitle}</h3>
+    <h3>{data.datoCmsPrivacy.subtitle}</h3>
     {/* Privacy Policy */}
 
-    {data.privacy.body}
+    {data.datoCmsPrivacy.body}
 
     {/* <p>Last Updated: November 15, 2014</p>
     <p>
@@ -38,7 +38,7 @@ export default ({ data }) => (
 
 export const query = graphql`
   query {
-    privacy {
+    datoCmsPrivacy {
       title
       subtitle
       body

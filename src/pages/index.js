@@ -16,9 +16,9 @@ export default ({ data }) => (
     </main>
 
     <div>
-      <h1>{data.index.title}</h1>
+      <h1>{data.datoCmsIndex.title}</h1>
       {/* Bob Saget is back */}
-      {data.index.body}
+      {data.datoCmsIndex.body}
       {/* The producers of “America’s Funniest Home Videos” have created the new
         comedy reality series “Videos After Dark” hosted by comedian Bob Saget
         and featuring home videos with an edgier twist. */}
@@ -30,7 +30,7 @@ export default ({ data }) => (
 
 export const query = graphql`
   query {
-    index {
+    datoCmsIndex {
       title
       body
     }

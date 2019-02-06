@@ -5,9 +5,9 @@ import { graphql } from 'gatsby';
 export default ({ data }) => (
   <section>
     <Link to="/">Close</Link>
-    <h2>{data.tou.title}</h2>
+    <h2>{data.datoCmsTou.title}</h2>
     {/* Terms of Use */}
-    <h3>{data.tou.subtitle}</h3>
+    <h3>{data.datoCmsTou.subtitle}</h3>
     {/* Videos After Dark Library */}
     {data.tou.body}
   </section>
@@ -15,7 +15,7 @@ export default ({ data }) => (
 
 export const query = graphql`
   query {
-    tou {
+    datoCmsTou {
       title
       subtitle
       body

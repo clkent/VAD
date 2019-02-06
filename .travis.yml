@@ -17,3 +17,7 @@ before_script:
 
 script:
   - gatsby build
+
+notifications:
+  webhooks:
+    - https://webhooks.datocms.com/FnPF9L4Ooi/deploy-results

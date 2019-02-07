@@ -16,7 +16,7 @@
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
   },
   "dependencies": {
-    "dotenv": "^6.0.0",
+    "dotenv": "^6.2.0",
     "gatsby": "^2.0.107",
     "gatsby-plugin-sharp": "^2.0.20",
     "gatsby-source-datocms": "^2.0.1",

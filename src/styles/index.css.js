@@ -14,11 +14,14 @@ export const LandingContainer = styled.section`
   height: 100%;
 
   .top {
-    background: url(${hero}) no-repeat center center fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.1)),
+      url(${hero}) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+
+    font-family: sans-serif;
 
     padding-top: 40px;
     height: 100vh;
@@ -28,20 +31,53 @@ export const LandingContainer = styled.section`
     align-items: center;
 
     .logo {
+      margin-top: 100px;
       max-width: 300px;
       -webkit-animation: flicker 10s linear both;
       animation: flicker 10s linear both;
     }
 
+    h2 {
+      color: white;
+      text-transform: uppercase;
+      font-family: sans-serif;
+
+      font-size: 1.5em;
+      letter-spacing: 1px;
+
+      -webkit-animation: neon 1.5s ease-in-out infinite alternate;
+      -moz-animation: neon 1.5s ease-in-out infinite alternate;
+      animation: neon 1.5s ease-in-out infinite alternate;
+    }
+
     a.btn {
-      background: #fff;
-      padding: 10px 20px;
-      border-radius: 20px;
+      background: #000;
+      padding: 15px 30px;
+      border-radius: 100px;
+      border: 3px solid #fff;
+      opacity: 0.9;
+
       text-decoration: none;
       text-transform: uppercase;
+      color: white;
+      letter-spacing: 1px;
+
+      margin-top: 60px;
     }
 
     /* ANIMATIONS */
+
+    @keyframes neon {
+      from {
+        text-shadow: 0 0 5px #fff, 0 0 6px pink, 0 0 8px red, 0 0 12px #ff1177,
+          0 0 15px #ff1177, 0 0 18px #ff1177, 0 0 20px #ff1177, 0 0 20px #ff1177;
+      }
+      to {
+        text-shadow: 0 0 5px #fff, 0 0 8px pink, 0 0 10px red, 0 0 20px #ff1177,
+          0 0 22px #ff1177, 0 0 24px #ff1177, 0 0 26px #ff1177, 0 0 28px #ff1177,
+          0 0 30px #ff1177;
+      }
+    }
 
     /*
     * ----------------------------------------

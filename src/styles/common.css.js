@@ -31,6 +31,9 @@ export const FooterContainer = styled.footer`
     padding-top: 35px;
     height: 45px;
 
+    position: relative;
+    z-index: 5;
+
     flex-direction: row;
     justify-content: center;
 

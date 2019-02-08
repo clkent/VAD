@@ -42,7 +42,7 @@ function IndexPage({ data }) {
             <p>{data.datoCmsIndex.body}</p>
           </div>
           <img
-            className="bob"
+            className="bob slide-top"
             src={require('../imgs/bob1.png')}
             alt="Bob Saget"
           />

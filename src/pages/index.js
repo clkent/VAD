@@ -11,28 +11,39 @@ import { LandingContainer } from '../styles/index.css';
 import Footer from '../components/footer';
 
 function IndexPage({ data }) {
-  const coverBg = {
-    backgroundImage: `url(${data.datoCmsIndex.cover.fluid.src})`,
-    backgroundPosition: 'center',
-    backgroundRepeat: 'no-repeat',
-    webkitBackgroundSize: 'cover',
-    mozBackgroundSize: 'cover',
-    oBackgroundSize: 'cover',
-    backgroundSize: 'cover',
-    backgroundAttachment: 'fixed'
-  };
-
   return (
     <LandingContainer>
-      <main className="top" role="main" style={coverBg}>
+      <main className="top" role="main">
+        <Img
+          fluid={data.datoCmsIndex.cover.fluid}
+          style={{
+            position: 'fixed',
+            left: 0,
+            top: 0,
+            height: '100%',
+            width: '100%',
+            zIndex: '-1'
+          }}
+        />
         {/* <MainNav /> */}
         <div className="main-info">
-          {/* <Img fluid={data.datoCmsIndex.logo.fluid.src} /> */}
           <img
+            className="abc"
+            src={require('../imgs/abc_vector.png')}
+            alt="ABC logo"
+          />
+          <Img
+            fluid={data.datoCmsIndex.logo.fluid}
+            style={{
+              position: 'relative',
+              width: '400px'
+            }}
+          />
+          {/* <img
             className="logo"
             src={data.datoCmsIndex.logo.fluid.src}
             alt="After Dark Logo"
-          />
+          /> */}
           <h2>{data.datoCmsIndex.launch}</h2>
           <Link className="btn" to="/upload">
             Submit a Video
@@ -63,13 +74,14 @@ export const query = graphql`
   query IndexQuery {
     datoCmsIndex {
       cover {
-        fluid(maxWidth: 3000, imgixParams: { fm: "jpg", auto: "compress" }) {
-          src
+        url
+        fluid(maxWidth: 2000, imgixParams: { fm: "jpg", auto: "compress" }) {
+          ...GatsbyDatoCmsSizes
         }
       }
       logo {
         fluid(maxWidth: 400, imgixParams: { fm: "png", auto: "compress" }) {
-          src
+          ...GatsbyDatoCmsSizes
         }
       }
       launch

@@ -2,6 +2,9 @@
 require('dotenv').config();
 
 module.exports = {
+  siteMetadata: {
+    title: `Videos After Dark`
+  },
   plugins: [
     {
       resolve: `gatsby-source-datocms`,
@@ -11,7 +14,19 @@ module.exports = {
         disableLiveReload: false
       }
     },
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp'
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Oswald`,
+            variants: [`400`, `700`]
+          },
+          {
+            family: `Roboto`
+          }
+        ]
+      }
+    }
   ]
 };

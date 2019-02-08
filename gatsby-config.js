@@ -13,6 +13,20 @@ module.exports = {
         preview: false,
         disableLiveReload: false
       }
+    },
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Oswald`,
+            variants: [`400`, `700`]
+          },
+          {
+            family: `Roboto`
+          }
+        ]
+      }
     }
   ]
 };

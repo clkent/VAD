@@ -2,7 +2,13 @@
 // LANDING PAGE STYLES
 // ------------------------------------------------
 
-import styled from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
+
+export const GlobalStyle = createGlobalStyle`
+  body {
+    margin: 0;
+  }
+`;
 
 //OVERALL
 export const LandingContainer = styled.div`
@@ -12,6 +18,15 @@ export const LandingContainer = styled.div`
     font-family: 'Oswald', sans-serif;
     height: 80vh;
 
+    .cover {
+      position: fixed !important;
+      left: 0;
+      top: 0;
+      height: 100vh;
+      width: 100%;
+      z-index: -1;
+    }
+
     div.main-info {
       height: 70vh;
       display: flex;
@@ -19,9 +34,18 @@ export const LandingContainer = styled.div`
       align-items: center;
       justify-content: center;
 
+      .abc {
+        max-width: 68px;
+        margin-bottom: 45px;
+      }
+
       .logo {
-        -webkit-animation: flicker 10s linear both;
-        animation: flicker 10s linear both;
+        position: relative;
+        width: 350px;
+        -webkit-animation: flicker 10s linear infinite both;
+        animation: flicker 10s linear infinite both;
+        -webkit-filter: drop-shadow(10px 10px 15px #000);
+        filter: drop-shadow(10px 10px 15px #000);
       }
 
       h2 {
@@ -43,15 +67,29 @@ export const LandingContainer = styled.div`
         border-radius: 100px;
         border: 3px solid #fff;
         opacity: 0.9;
+        box-shadow: 5px 5px 15px #000;
 
         text-decoration: none;
         text-transform: uppercase;
         color: white;
         letter-spacing: 2px;
+        cursor: pointer;
 
         margin-top: 40px;
       }
       /* ANIMATIONS */
+
+      .fade-in {
+        -webkit-animation: fade-in 2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+        animation: fade-in 2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+      }
+
+      .slide-in {
+        -webkit-animation: slide-in-bck-center 2s
+          cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+        animation: slide-in-bck-center 2s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+          both;
+      }
 
       /*
     * ----------------------------------------
@@ -69,6 +107,50 @@ export const LandingContainer = styled.div`
           text-shadow: 0 0 1px pink, 0 0 8px pink, 0 0 10px red,
             0 0 20px #ff1177, 0 0 22px #ff1177, 0 0 24px #ff1177,
             0 0 26px #ff1177, 0 0 28px #ff1177, 0 0 30px #ff1177;
+        }
+      }
+
+      /**
+ * ----------------------------------------
+ * animation fade-in
+ * ----------------------------------------
+ */
+      @-webkit-keyframes fade-in {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      @keyframes fade-in {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      /**
+ * ----------------------------------------
+ * animation fade-in
+ * ----------------------------------------
+ */
+      @-webkit-keyframes fade-in {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      @keyframes fade-in {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
         }
       }
 
@@ -122,225 +204,12 @@ export const LandingContainer = styled.div`
         14.98% {
           opacity: 1;
         }
-        15% {
-          opacity: 0.5;
-        }
-        15.8% {
-          opacity: 0.5;
-        }
-        15.82% {
-          opacity: 1;
-        }
-        15.18% {
-          opacity: 1;
-        }
-        15.2% {
-          opacity: 0.7;
-        }
-        16% {
-          opacity: 0.7;
-        }
-        16.02% {
-          opacity: 1;
-        }
-        15.48% {
-          opacity: 1;
-        }
-        15.5% {
-          opacity: 0.5;
-        }
-        16.2% {
-          opacity: 0.5;
-        }
-        16.22% {
-          opacity: 1;
-        }
-        16.98% {
-          opacity: 1;
-        }
-        17% {
-          opacity: 1;
-        }
-        17.8% {
-          opacity: 1;
-        }
-        17.82% {
-          opacity: 1;
-        }
-        20.48% {
-          opacity: 1;
-        }
-        20.5% {
-          opacity: 0.9;
-        }
-        21.3% {
-          opacity: 0.9;
-        }
-        21.32% {
-          opacity: 1;
-        }
-        20.98% {
-          opacity: 1;
-        }
-        21% {
-          opacity: 1;
-        }
-        22% {
-          opacity: 1;
-        }
-        22.02% {
-          opacity: 1;
-        }
-        39.98% {
-          opacity: 1;
-        }
-        40% {
-          opacity: 1;
-        }
-        41% {
-          opacity: 1;
-        }
-        41.02% {
-          opacity: 1;
-        }
-        40.48% {
-          opacity: 1;
-        }
-        40.5% {
-          opacity: 0.6;
-        }
-        41.4% {
-          opacity: 0.6;
-        }
-        41.42% {
-          opacity: 1;
-        }
-        41.98% {
-          opacity: 1;
-        }
-        42% {
-          opacity: 1;
-        }
-        42.8% {
-          opacity: 1;
-        }
-        42.82% {
-          opacity: 1;
-        }
-        59.98% {
-          opacity: 1;
-        }
-        60% {
-          opacity: 1;
-        }
-        61% {
-          opacity: 1;
-        }
-        61.02% {
-          opacity: 1;
-        }
-        60.18% {
-          opacity: 1;
-        }
-        60.2% {
-          opacity: 0.2;
-        }
-        61% {
-          opacity: 0.2;
-        }
-        61.02% {
-          opacity: 1;
-        }
-        60.78% {
-          opacity: 1;
-        }
-        60.8% {
-          opacity: 0.4;
-        }
-        61.6% {
-          opacity: 0.4;
-        }
-        61.62% {
-          opacity: 1;
-        }
-        61.38% {
-          opacity: 1;
-        }
-        61.4% {
-          opacity: 0;
-        }
-        62.2% {
-          opacity: 0;
-        }
-        62.22% {
-          opacity: 1;
-        }
-        61.78% {
-          opacity: 1;
-        }
-        61.8% {
-          opacity: 1;
-        }
-        62.8% {
-          opacity: 1;
-        }
-        62.82% {
-          opacity: 1;
-        }
-        75.98% {
-          opacity: 1;
-        }
-        76% {
-          opacity: 1;
-        }
-        77% {
-          opacity: 1;
-        }
-        77.02% {
-          opacity: 1;
-        }
-        77.98% {
-          opacity: 1;
-        }
-        78% {
-          opacity: 0.7;
-        }
-        78.8% {
-          opacity: 0.7;
-        }
-        78.82% {
-          opacity: 1;
-        }
-        78.98% {
-          opacity: 1;
-        }
-        79% {
-          opacity: 1;
-        }
-        80% {
-          opacity: 1;
-        }
-        80.02% {
-          opacity: 1;
-        }
-        99.98% {
-          opacity: 1;
-        }
-        100% {
-          opacity: 1;
-        }
-        101% {
-          opacity: 1;
-        }
-        101.02% {
-          opacity: 1;
-        }
       }
     }
   }
 
   .details {
-    height: 100vh;
+    height: 91vh;
     width: 100vw;
 
     display: flex;
@@ -348,19 +217,27 @@ export const LandingContainer = styled.div`
     align-items: center;
     justify-content: center;
 
+    background: #fff;
+
     div {
       max-width: 600px;
       align-self: center;
       justify-items: center;
+      margin-left: 70px;
 
       h1 {
-        font-size: 3em;
+        font-size: 2em;
+        font-family: 'Oswald', sans-serif;
+        text-transform: uppercase;
+
         margin-bottom: 20px;
       }
 
       p {
-        font-size: 1.5em;
-        line-height: 1.45em;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.4em;
+        line-height: 1.65em;
+        letter-spacing: 1px;
       }
     }
   }

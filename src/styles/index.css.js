@@ -3,21 +3,13 @@
 // ------------------------------------------------
 
 import styled from 'styled-components';
-import hero from '../imgs/CubeUpwards_h264.jpg';
 
 //OVERALL
 export const LandingContainer = styled.div`
   height: 100%;
 
   .top {
-    background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.1)),
-      url(${hero}) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-
-    font-family: sans-serif;
+    font-family: 'Oswald', sans-serif;
     height: 80vh;
 
     div.main-info {
@@ -28,7 +20,6 @@ export const LandingContainer = styled.div`
       justify-content: center;
 
       .logo {
-        max-width: 300px;
         -webkit-animation: flicker 10s linear both;
         animation: flicker 10s linear both;
       }
@@ -36,10 +27,10 @@ export const LandingContainer = styled.div`
       h2 {
         color: white;
         text-transform: uppercase;
-        font-family: sans-serif;
+        font-family: 'Oswald', sans-serif;
 
-        font-size: 1.5em;
-        letter-spacing: 1px;
+        font-size: 1.75em;
+        letter-spacing: 2px;
 
         -webkit-animation: neon 1.5s ease-in-out infinite alternate;
         -moz-animation: neon 1.5s ease-in-out infinite alternate;
@@ -56,9 +47,9 @@ export const LandingContainer = styled.div`
         text-decoration: none;
         text-transform: uppercase;
         color: white;
-        letter-spacing: 1px;
+        letter-spacing: 2px;
 
-        margin-top: 60px;
+        margin-top: 40px;
       }
       /* ANIMATIONS */
 
@@ -70,12 +61,12 @@ export const LandingContainer = styled.div`
 
       @keyframes neon {
         from {
-          text-shadow: 0 0 5px #fff, 0 0 6px pink, 0 0 8px red, 0 0 12px #ff1177,
+          text-shadow: 0 0 1px pink, 0 0 6px pink, 0 0 8px red, 0 0 12px #ff1177,
             0 0 15px #ff1177, 0 0 18px #ff1177, 0 0 20px #ff1177,
             0 0 20px #ff1177;
         }
         to {
-          text-shadow: 0 0 5px #fff, 0 0 8px pink, 0 0 10px red,
+          text-shadow: 0 0 1px pink, 0 0 8px pink, 0 0 10px red,
             0 0 20px #ff1177, 0 0 22px #ff1177, 0 0 24px #ff1177,
             0 0 26px #ff1177, 0 0 28px #ff1177, 0 0 30px #ff1177;
         }

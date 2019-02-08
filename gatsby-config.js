@@ -10,6 +10,8 @@ module.exports = {
         preview: false,
         disableLiveReload: false
       }
-    }
+    },
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp'
   ]
 };

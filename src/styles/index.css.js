@@ -3,10 +3,12 @@
 // ------------------------------------------------
 
 import styled, { createGlobalStyle } from 'styled-components';
+import noise from '../imgs/noise.png';
 
 export const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
+    background: #000;
   }
 `;
 
@@ -28,7 +30,7 @@ export const LandingContainer = styled.div`
     }
 
     div.main-info {
-      height: 85vh;
+      height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -42,27 +44,28 @@ export const LandingContainer = styled.div`
 
       .logo {
         position: relative;
-        width: 325px;
-        -webkit-filter: drop-shadow(10px 10px 15px #000);
-        filter: drop-shadow(10px 10px 15px #000);
-
-        /* img {
-          -webkit-animation: flicker 10s linear infinite both;
-          animation: flicker 10s linear infinite both;
-        } */
+        width: 350px;
+        /* -webkit-filter: drop-shadow(10px 10px 15px #000);
+        filter: drop-shadow(10px 10px 15px #000); */
       }
 
       h2 {
         color: white;
         text-transform: uppercase;
         font-family: 'Oswald', sans-serif;
-
         font-size: 1.6em;
         letter-spacing: 2px;
+        text-align: center;
 
-        -webkit-animation: neon 1.5s ease-in-out infinite alternate;
-        -moz-animation: neon 1.5s ease-in-out infinite alternate;
-        animation: neon 1.5s ease-in-out infinite alternate;
+        max-width: 300px;
+        margin-top: 10px;
+
+        -webkit-animation: neon 1.5s ease-in-out infinite alternate,
+          flicker 10s linear infinite both;
+        -moz-animation: neon 1.5s ease-in-out infinite alternate,
+          flicker 1s linear infinite both;
+        animation: neon 1.5s ease-in-out infinite alternate,
+          flicker 1s linear infinite both;
       }
 
       a.btn {
@@ -192,16 +195,14 @@ export const LandingContainer = styled.div`
     .top {
       height: 97vh;
 
-      .abc {
-        margin-top: 0;
-      }
+      div.main-info {
+        .abc {
+          margin-top: 10px;
+        }
 
-      .logo {
-        width: 350px;
-      }
-
-      h2 {
-        font-size: 1.75em;
+        .logo {
+          width: 450px;
+        }
       }
     }
   }
@@ -214,13 +215,14 @@ export const LandingContainer = styled.div`
     align-items: center;
     justify-content: center;
 
-    background: #fff;
+    background: url(${noise});
+    color: #fff;
 
     div {
       max-width: 600px;
       align-self: center;
       justify-items: center;
-      margin: 10px;
+      margin: 40px;
       text-align: center;
 
       h1 {
@@ -232,14 +234,21 @@ export const LandingContainer = styled.div`
 
       p {
         font-family: 'Roboto', sans-serif;
-        font-size: 1.25em;
+        font-size: 1.125em;
         line-height: 1.5em;
       }
     }
 
     @media (min-width: 380px) {
-      background: rgba(225, 225, 225, 0.9);
+      border-top: 1px solid #000;
+      background: url(${noise});
 
+      div {
+        p {
+          font-size: 1.5em;
+          line-height: 1.75em;
+        }
+      }
       .bob {
         position: relative;
         z-index: 1;
@@ -303,7 +312,7 @@ export const LandingContainer = styled.div`
       justify-content: space-between;
 
       div {
-        margin-left: 30%;
+        margin-left: 15%;
         text-align: center;
         max-width: 626px;
       }

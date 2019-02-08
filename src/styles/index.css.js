@@ -49,57 +49,6 @@ export const LandingContainer = styled.div`
         /* img {
           -webkit-animation: flicker 10s linear infinite both;
           animation: flicker 10s linear infinite both;
-
-          /*
-    * ----------------------------------------
-    * animation flicker
-    * ----------------------------------------
-    */
-          @keyframes flicker {
-            0%,
-            100% {
-              opacity: 1;
-            }
-            -0.02% {
-              opacity: 1;
-            }
-            0% {
-              opacity: 1;
-            }
-            1% {
-              opacity: 1;
-            }
-            1.02% {
-              opacity: 1;
-            }
-            8.98% {
-              opacity: 1;
-            }
-            9% {
-              opacity: 0;
-            }
-            9.8% {
-              opacity: 0;
-            }
-            9.82% {
-              opacity: 1;
-            }
-            9.48% {
-              opacity: 1;
-            }
-            9.5% {
-              opacity: 1;
-            }
-            9.6% {
-              opacity: 1;
-            }
-            9.62% {
-              opacity: 1;
-            }
-            14.98% {
-              opacity: 1;
-            }
-          }
         } */
       }
 
@@ -144,6 +93,57 @@ export const LandingContainer = styled.div`
           cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
         animation: slide-in-bck-center 2s cubic-bezier(0.25, 0.46, 0.45, 0.94)
           both;
+      }
+
+      /*
+    * ----------------------------------------
+    * animation flicker
+    * ----------------------------------------
+    */
+      @keyframes flicker {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        -0.02% {
+          opacity: 1;
+        }
+        0% {
+          opacity: 1;
+        }
+        1% {
+          opacity: 1;
+        }
+        1.02% {
+          opacity: 1;
+        }
+        8.98% {
+          opacity: 1;
+        }
+        9% {
+          opacity: 0;
+        }
+        9.8% {
+          opacity: 0;
+        }
+        9.82% {
+          opacity: 1;
+        }
+        9.48% {
+          opacity: 1;
+        }
+        9.5% {
+          opacity: 1;
+        }
+        9.6% {
+          opacity: 1;
+        }
+        9.62% {
+          opacity: 1;
+        }
+        14.98% {
+          opacity: 1;
+        }
       }
 
       /*
@@ -239,6 +239,11 @@ export const LandingContainer = styled.div`
 
     @media (min-width: 380px) {
       background: rgba(225, 225, 225, 0.9);
+
+      .bob {
+        position: relative;
+        z-index: 1;
+      }
 
       /*ANIMATIONS*/
 

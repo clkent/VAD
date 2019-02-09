@@ -44,7 +44,10 @@ export const LandingContainer = styled.div`
 
       .logo {
         position: relative;
-        width: 350px;
+        width: 325px;
+        min-height: 210px;
+        margin-top: 30px;
+
         /* -webkit-filter: drop-shadow(10px 10px 15px #000);
         filter: drop-shadow(10px 10px 15px #000); */
       }
@@ -61,11 +64,14 @@ export const LandingContainer = styled.div`
         margin-top: 10px;
 
         -webkit-animation: neon 1.5s ease-in-out infinite alternate,
-          flicker 10s linear infinite both;
+          flicker 10s linear infinite both,
+          fade-in 4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
         -moz-animation: neon 1.5s ease-in-out infinite alternate,
-          flicker 1s linear infinite both;
+          flicker 10s linear infinite both,
+          fade-in 4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
         animation: neon 1.5s ease-in-out infinite alternate,
-          flicker 1s linear infinite both;
+          flicker 10s linear infinite both,
+          fade-in 4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
       }
 
       a.btn {
@@ -201,7 +207,7 @@ export const LandingContainer = styled.div`
         }
 
         .logo {
-          width: 450px;
+          width: 350px;
         }
       }
     }

@@ -22,11 +22,11 @@ function IndexPage({ data }) {
             <Img
               className="logo fade-in"
               fluid={data.datoCmsIndex.logo.fluid}
-              alt="After Dark Logo"
+              alt="Videos After Dark Logo"
             />
             <h2>{data.datoCmsIndex.launch}</h2>
             <img
-              className="abc"
+              className="abc fade-in"
               src={require('../imgs/abc_vector.png')}
               alt="ABC logo"
             />
@@ -69,8 +69,8 @@ export const query = graphql`
         }
       }
       logo {
-        fluid(maxWidth: 450, imgixParams: { fm: "png", auto: "compress" }) {
-          ...GatsbyDatoCmsSizes
+        fluid(maxWidth: 350, imgixParams: { fm: "png", auto: "compress" }) {
+          src
         }
       }
       launch

@@ -19,8 +19,6 @@ export const PageContainer = styled.div`
   }
 
   div.content {
-    height: 88vh;
-    width: 88vw;
     background: url(${noise});
     border: 1px solid #ccc;
     border-radius: 20px;
@@ -55,6 +53,12 @@ export const PageContainer = styled.div`
       font-family: 'Roboto', sans-serif;
       text-transform: uppercase;
       text-decoration: none;
+    }
+  }
+  @media (min-width: 380px) {
+    div.content {
+      height: 88vh;
+      width: 88vw;
     }
   }
 `;

@@ -2,15 +2,8 @@
 // LANDING PAGE STYLES
 // ------------------------------------------------
 
-import styled, { createGlobalStyle } from 'styled-components';
+import styled from 'styled-components';
 import noise from '../imgs/noise.png';
-
-export const GlobalStyle = createGlobalStyle`
-  body {
-    margin: 0;
-    background: #000;
-  }
-`;
 
 //OVERALL
 export const LandingContainer = styled.div`

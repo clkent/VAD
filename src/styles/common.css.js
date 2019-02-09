@@ -2,7 +2,14 @@
 // COMMON SHARED STYLES
 // ------------------------------------------------
 
-import styled from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
+
+export const GlobalStyle = createGlobalStyle`
+  body {
+    margin: 0;
+    background: #000;
+  }
+`;
 
 //FOOTER
 export const FooterContainer = styled.footer`

@@ -1,7 +1,6 @@
 //-------------------------------------------------
 //  SECONDARY PAGE STYLES
 // ------------------------------------------------
-
 import styled from 'styled-components';
 import noise from '../imgs/noise.png';
 

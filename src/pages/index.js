@@ -3,7 +3,8 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
-import { LandingContainer, GlobalStyle } from '../styles/index.css';
+import { LandingContainer } from '../styles/index.css';
+import { GlobalStyle } from '../styles/common.css';
 
 //Social links hidden for now
 // import MainNav from '../components/mainNav';

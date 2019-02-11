@@ -11,6 +11,36 @@ export const GlobalStyle = createGlobalStyle`
   }
 `;
 
+//MAIN NAV
+export const MainNav = styled.nav`
+  width: auto;
+  display: flex;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+
+  a {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.125em;
+    letter-spacing: 1px;
+    text-decoration: none;
+
+    :hover {
+      color: pink;
+    }
+  }
+
+  @media (min-width: 380px) {
+    right: 20px;
+    top: 20px;
+
+    a {
+      font-size: 1.25em;
+    }
+  }
+`;
+
 //FOOTER
 export const FooterContainer = styled.footer`
   height: 150px;

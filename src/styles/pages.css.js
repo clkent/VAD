@@ -21,8 +21,9 @@ export const PageContainer = styled.div`
     background: url(${noise});
     border: 1px solid #ccc;
     border-radius: 20px;
-    margin: 3% auto;
-    padding: 25px;
+    padding: 15px;
+    margin: 10px;
+    overflow-wrap: break-word;
 
     h1,
     h2 {
@@ -56,8 +57,9 @@ export const PageContainer = styled.div`
   }
   @media (min-width: 380px) {
     div.content {
-      height: 88vh;
+      height: 100%;
       width: 88vw;
+      margin: 3% auto;
     }
   }
 `;

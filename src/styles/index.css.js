@@ -222,7 +222,7 @@ export const LandingContainer = styled.div`
       max-width: 680px;
       align-self: center;
       justify-items: center;
-      margin: 20px 20px 20px 40px;
+      margin: 20px 20px 35px 40px;
       text-align: left;
 
       h1 {
@@ -317,7 +317,7 @@ export const LandingContainer = styled.div`
 
     @media (min-width: 1099px) {
       flex-direction: row;
-      max-height: 520px;
+      max-height: 486px;
     }
 
     @media (min-width: 1325px) {

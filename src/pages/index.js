@@ -6,8 +6,7 @@ import Img from 'gatsby-image';
 import { LandingContainer } from '../styles/index.css';
 import { GlobalStyle } from '../styles/common.css';
 
-//Social links hidden for now
-// import MainNav from '../components/mainNav';
+import MainNav from '../components/mainNav';
 
 import Footer from '../components/footer';
 
@@ -18,7 +17,7 @@ function IndexPage({ data }) {
       <LandingContainer>
         <main className="top" role="main">
           <Img className="cover" fluid={data.datoCmsIndex.cover.fluid} />
-          {/* <MainNav /> */}
+          <MainNav />
           <div className="main-info drop-down">
             <Img
               className="logo fade-in"
@@ -43,6 +42,16 @@ function IndexPage({ data }) {
             <p>{data.datoCmsIndex.body}</p>
             <p>
               <strong>Watch us on ABC, March 12th 10/9c.</strong>
+            </p>
+            <p className="social">
+              <a href="https://twitter.com/videosafterdark">
+                Follow us on{' '}
+                <img
+                  className="twitter fade-in"
+                  src={require('../imgs/Twitter_Social_Icon_Circle_Color.png')}
+                  alt="ABC logo"
+                />
+              </a>
             </p>
           </div>
           <img
@@ -70,7 +79,7 @@ export const query = graphql`
         }
       }
       logo {
-        fluid(maxWidth: 350, imgixParams: { fm: "png", auto: "compress" }) {
+        fluid(maxWidth: 450, imgixParams: { fm: "png", auto: "compress" }) {
           src
         }
       }

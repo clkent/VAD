@@ -41,8 +41,8 @@ export const LandingContainer = styled.div`
         min-height: 210px;
         margin-top: 30px;
 
-        /* -webkit-filter: drop-shadow(10px 10px 15px #000);
-        filter: drop-shadow(10px 10px 15px #000); */
+        -webkit-filter: drop-shadow(10px 10px 15px #000);
+        filter: drop-shadow(10px 10px 15px #000);
       }
 
       h2 {
@@ -156,14 +156,14 @@ export const LandingContainer = styled.div`
 
       @keyframes neon {
         from {
-          text-shadow: 0 0 1px pink, 0 0 6px pink, 0 0 8px red, 0 0 12px #ff1177,
-            0 0 15px #ff1177, 0 0 18px #ff1177, 0 0 20px #ff1177,
+          text-shadow: 0 0 1px pink, 0 0 4px pink, 0 0 6px red, 0 0 10px #ff1177,
+            0 0 12px #ff1177, 0 0 15px #ff1177, 0 0 18px #ff1177,
             0 0 20px #ff1177;
         }
         to {
           text-shadow: 0 0 1px pink, 0 0 8px pink, 0 0 10px red,
-            0 0 20px #ff1177, 0 0 22px #ff1177, 0 0 24px #ff1177,
-            0 0 26px #ff1177, 0 0 28px #ff1177, 0 0 30px #ff1177;
+            0 0 10px #ff1177, 0 0 12px #ff1177, 0 0 15px #ff1177,
+            0 0 20px #ff1177, 0 0 22px #ff1177, 0 0 24px #ff1177;
         }
       }
 
@@ -200,7 +200,8 @@ export const LandingContainer = styled.div`
         }
 
         .logo {
-          width: 350px;
+          width: 450px;
+          height: 310px;
         }
       }
     }
@@ -218,23 +219,50 @@ export const LandingContainer = styled.div`
     color: #fff;
 
     div {
-      max-width: 600px;
+      max-width: 680px;
       align-self: center;
       justify-items: center;
-      margin: 40px;
-      text-align: center;
+      margin: 20px 20px 35px 40px;
+      text-align: left;
 
       h1 {
         font-size: 1.75em;
         font-family: 'Oswald', sans-serif;
         text-transform: uppercase;
-        margin: 80px 20px 20px 20px;
+        /* margin: 80px 20px 20px 20px; */
       }
 
       p {
         font-family: 'Roboto', sans-serif;
         font-size: 1.125em;
         line-height: 1.5em;
+      }
+
+      p.social {
+        position: relative;
+        bottom: 0px;
+        margin: 0;
+        a {
+          text-transform: uppercase;
+          text-decoration: none;
+          font-family: 'Oswald', sans-serif;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          color: #fff;
+          font-size: 0.95em;
+
+          .twitter {
+            max-width: 22px;
+            padding: 0 2px;
+          }
+        }
+      }
+
+      strong {
+        text-transform: uppercase;
+        font-family: 'Oswald', sans-serif;
+        letter-spacing: 1px;
+        color: #ff6780;
       }
     }
 
@@ -285,35 +313,20 @@ export const LandingContainer = styled.div`
           transform: translateY(-100px);
         }
       }
-
-      div {
-        margin-left: 70px;
-        text-align: left;
-
-        h1 {
-          font-size: 2em;
-          margin: 40px 20px 20px 20px;
-        }
-
-        p {
-          font-size: 1.4em;
-          line-height: 1.65em;
-        }
-      }
     }
 
-    @media (min-width: 915px) {
+    @media (min-width: 1099px) {
       flex-direction: row;
-      max-height: 520px;
+      max-height: 486px;
     }
 
-    @media (min-width: 1225px) {
+    @media (min-width: 1325px) {
       justify-content: space-between;
 
       div {
         margin-left: 15%;
         text-align: center;
-        max-width: 626px;
+        max-width: 680px;
       }
     }
 

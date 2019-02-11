@@ -192,7 +192,7 @@ export const LandingContainer = styled.div`
   }
   @media (min-width: 380px) {
     .top {
-      height: 97vh;
+      height: 96vh;
 
       div.main-info {
         .abc {
@@ -279,6 +279,7 @@ export const LandingContainer = styled.div`
       .bob {
         position: relative;
         z-index: 1;
+        margin-bottom: -63px;
       }
 
       /*ANIMATIONS*/
@@ -317,7 +318,7 @@ export const LandingContainer = styled.div`
 
     @media (min-width: 1099px) {
       flex-direction: row;
-      max-height: 486px;
+      max-height: 550px;
     }
 
     @media (min-width: 1325px) {

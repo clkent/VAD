@@ -249,11 +249,11 @@ export const LandingContainer = styled.div`
           letter-spacing: 1px;
           text-transform: uppercase;
           color: #fff;
-          font-size: 1.125em;
+          font-size: 0.95em;
 
           .twitter {
-            max-width: 25px;
-            padding: 0 5px 0 0;
+            max-width: 22px;
+            padding: 0 2px;
           }
         }
       }

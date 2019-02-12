@@ -1,23 +1,22 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import { MainNav } from '../styles/common.css';
+import { slide as Menu } from 'react-burger-menu';
 
-export default () => {
-  return (
-    <MainNav>
-      <Link to="/privacy">Privacy</Link>
-    </MainNav>
+import { MainNavStyles } from '../styles/common.css';
 
-    // <div className="social">
-    //   <a className="fb-icon" href="https://www.facebook.com/videosafterdark">
-    //     FB
-    //   </a>
-    //   <a className="yt-icon" href="https://www.youtube.com">
-    //     YT
-    //   </a>
-    //   <a className="ig-icon" href="https://www.instagram.com">
-    //     IG
-    //   </a>
-    // </div>
-  );
-};
+class MainNav extends React.Component {
+  render() {
+    return (
+      <MainNavStyles>
+        <Menu right>
+          <a id="privacy" className="menu-item" href="/privacy">
+            Privacy
+          </a>
+          {/* <Link to="/privacy">Privacy</Link> */}
+        </Menu>
+      </MainNavStyles>
+    );
+  }
+}
+
+export default MainNav;

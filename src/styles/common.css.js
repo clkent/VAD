@@ -3,6 +3,7 @@
 // ------------------------------------------------
 
 import styled, { createGlobalStyle } from 'styled-components';
+import noise from '../imgs/noise.png';
 
 export const GlobalStyle = createGlobalStyle`
   body {
@@ -12,8 +13,80 @@ export const GlobalStyle = createGlobalStyle`
 `;
 
 //MAIN NAV
-export const MainNav = styled.nav`
-  width: auto;
+export const MainNavStyles = styled.div`
+  /* Position and sizing of burger button */
+  .bm-burger-button {
+    position: fixed;
+    width: 36px;
+    height: 30px;
+    right: 36px;
+    top: 36px;
+  }
+
+  /* Color/shape of burger icon bars */
+  .bm-burger-bars {
+    background: #fff;
+  }
+
+  /* Color/shape of burger icon bars on hover*/
+  .bm-burger-bars-hover {
+    background: #fff;
+  }
+
+  /* Position and sizing of clickable cross button */
+  .bm-cross-button {
+    height: 24px;
+    width: 24px;
+  }
+
+  /* Color/shape of close button cross */
+  .bm-cross {
+    background: #fff;
+  }
+
+  /*
+Sidebar wrapper styles
+Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+*/
+  .bm-menu-wrap {
+    position: fixed;
+    height: 100%;
+  }
+
+  /* General sidebar styles */
+  .bm-menu {
+    background: url(${noise});
+    padding: 2.5em 1.5em 0;
+    font-size: 1.15em;
+  }
+
+  /* Wrapper for item list */
+  .bm-item-list {
+    color: #b8b7ad;
+    padding: 0.8em;
+  }
+
+  /* Individual item */
+  .bm-item {
+    display: inline-block;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.125em;
+    letter-spacing: 1px;
+    text-decoration: none;
+    outline: none;
+
+    :hover {
+      color: pink;
+    }
+  }
+
+  /* Styling of overlay */
+  .bm-overlay {
+    background: rgba(0, 0, 0, 0.3);
+  }
+
+  /* width: auto;
   display: flex;
   position: absolute;
   right: 10px;
@@ -38,7 +111,7 @@ export const MainNav = styled.nav`
     a {
       font-size: 1.25em;
     }
-  }
+  } */
 `;
 
 //FOOTER

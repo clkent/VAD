@@ -266,6 +266,10 @@ export const LandingContainer = styled.div`
       }
     }
 
+    .bob {
+      width: 100vw;
+    }
+
     @media (min-width: 380px) {
       border-top: 1px solid #000;
       background: url(${noise});
@@ -280,6 +284,7 @@ export const LandingContainer = styled.div`
         position: relative;
         z-index: 1;
         margin-bottom: -63px;
+        width: auto;
       }
 
       /*ANIMATIONS*/

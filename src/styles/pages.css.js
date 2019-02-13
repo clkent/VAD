@@ -42,7 +42,7 @@ export const PageContainer = styled.div`
     p {
       font-family: 'Roboto', sans-serif;
       letter-spacing: 1px;
-      font-size: 1.125em;
+      font-size: 1em;
       line-height: 1.5em;
       margin: 20px;
     }
@@ -55,11 +55,25 @@ export const PageContainer = styled.div`
       text-decoration: none;
     }
   }
+
+  div.uploader-content {
+    height: 100vh;
+    max-width: 866px;
+    padding: 25px;
+  }
+
+  div.uploader {
+    margin-top: 20px;
+  }
+
   @media (min-width: 380px) {
     div.content {
       height: 100%;
       width: 88vw;
       margin: 3% auto;
+    }
+    div.uploader-content {
+      height: 100vh;
     }
   }
 `;

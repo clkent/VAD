@@ -41,8 +41,8 @@ export const LandingContainer = styled.div`
         min-height: 210px;
         margin-top: 30px;
 
-        -webkit-filter: drop-shadow(10px 10px 15px #000);
-        filter: drop-shadow(10px 10px 15px #000);
+        -webkit-filter: drop-shadow(2px 2px 5px #000);
+        filter: drop-shadow(2px 2px 5px #000);
       }
 
       h2 {
@@ -90,12 +90,12 @@ export const LandingContainer = styled.div`
         animation: fade-in 2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
       }
 
-      .slide-in {
+      /* .slide-in {
         -webkit-animation: slide-in-bck-center 2s
           cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
         animation: slide-in-bck-center 2s cubic-bezier(0.25, 0.46, 0.45, 0.94)
           both;
-      }
+      } */
 
       /*
     * ----------------------------------------
@@ -192,8 +192,6 @@ export const LandingContainer = styled.div`
   }
   @media (min-width: 380px) {
     .top {
-      height: 96vh;
-
       div.main-info {
         .abc {
           margin-top: 10px;
@@ -202,6 +200,8 @@ export const LandingContainer = styled.div`
         .logo {
           width: 450px;
           height: 310px;
+          -webkit-filter: drop-shadow(10px 10px 15px #000);
+          filter: drop-shadow(10px 10px 15px #000);
         }
       }
     }
@@ -219,11 +219,11 @@ export const LandingContainer = styled.div`
     color: #fff;
 
     div {
-      max-width: 680px;
+      max-width: 700px;
       align-self: center;
       justify-items: center;
       margin: 20px 20px 35px 40px;
-      text-align: left;
+      text-align: center;
 
       h1 {
         font-size: 1.75em;
@@ -258,16 +258,20 @@ export const LandingContainer = styled.div`
         }
       }
 
+      span.announcement,
       strong {
         text-transform: uppercase;
         font-family: 'Oswald', sans-serif;
         letter-spacing: 1px;
+      }
+
+      span.announcement {
         color: #ff6780;
       }
     }
 
     .bob {
-      width: 100vw;
+      width: 80vw;
     }
 
     @media (min-width: 380px) {
@@ -283,17 +287,18 @@ export const LandingContainer = styled.div`
       .bob {
         position: relative;
         z-index: 1;
-        margin-bottom: -63px;
-        width: auto;
+        max-width: 500px;
+        right: -15px;
+        margin-top: 25px;
       }
 
       /*ANIMATIONS*/
 
-      .slide-top {
+      /* .slide-top {
         -webkit-animation: slide-top 6s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s
           both;
         animation: slide-top 6s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s both;
-      }
+      } */
       /**
  * ----------------------------------------
  * animation slide-top
@@ -323,7 +328,7 @@ export const LandingContainer = styled.div`
 
     @media (min-width: 1099px) {
       flex-direction: row;
-      max-height: 550px;
+      max-height: 650px;
     }
 
     @media (min-width: 1325px) {

@@ -10,14 +10,14 @@ export default ({ data }) => (
   <>
     <GlobalStyle />
     <PageContainer>
-      <Img className="cover" fluid={data.datoCmsPrivacy.cover.fluid} />
+      <Img className="cover" fluid={data.datoCmsPrivacyeu.cover.fluid} />
       <div className="content">
         <Link to="/"> ⬅ Back</Link>
-        <h1>{data.datoCmsPrivacy.title}</h1>
-        <h2>{data.datoCmsPrivacy.subtitle}</h2>
+        <h1>{data.datoCmsPrivacyeu.title}</h1>
+        <h2>{data.datoCmsPrivacyeu.subtitle}</h2>
         <div
           dangerouslySetInnerHTML={{
-            __html: data.datoCmsPrivacy.bodyNode.childMarkdownRemark.html
+            __html: data.datoCmsPrivacyeu.bodyNode.childMarkdownRemark.html
           }}
         />
       </div>
@@ -27,7 +27,7 @@ export default ({ data }) => (
 
 export const query = graphql`
   query {
-    datoCmsPrivacy {
+    datoCmsPrivacyeu {
       cover {
         url
         fluid(maxWidth: 2000, imgixParams: { fm: "jpg", auto: "compress" }) {

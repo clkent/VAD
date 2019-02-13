@@ -222,7 +222,7 @@ export const LandingContainer = styled.div`
       max-width: 700px;
       align-self: center;
       justify-items: center;
-      margin: 20px 20px 35px 40px;
+      margin: 30px 10px;
       text-align: center;
 
       h1 {
@@ -271,7 +271,8 @@ export const LandingContainer = styled.div`
     }
 
     .bob {
-      width: 80vw;
+      width: 100vw;
+      margin-top: 30px;
     }
 
     @media (min-width: 380px) {
@@ -279,6 +280,7 @@ export const LandingContainer = styled.div`
       background: url(${noise});
 
       div {
+        margin: 20px 20px 35px 40px;
         p {
           font-size: 1.5em;
           line-height: 1.75em;

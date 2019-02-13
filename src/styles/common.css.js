@@ -16,11 +16,15 @@ export const GlobalStyle = createGlobalStyle`
 export const MainNavStyles = styled.div`
   /* Position and sizing of burger button */
   .bm-burger-button {
-    position: fixed;
+    position: absolute;
     width: 36px;
     height: 30px;
     right: 36px;
     top: 36px;
+
+    @media (min-width: 380px) {
+      position: fixed;
+    }
   }
 
   /* Color/shape of burger icon bars */
@@ -75,6 +79,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
     letter-spacing: 1px;
     text-decoration: none;
     outline: none;
+    padding: 15px 0;
 
     :hover {
       color: pink;

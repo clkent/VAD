@@ -39,9 +39,15 @@ function IndexPage({ data }) {
         <section className="details">
           <div>
             <h1>{data.datoCmsIndex.title}</h1>
-            <p>{data.datoCmsIndex.body}</p>
+            <div
+              dangerouslySetInnerHTML={{
+                __html: data.datoCmsIndex.bodyNode.childMarkdownRemark.html
+              }}
+            />
             <p>
-              <strong>Watch us on ABC, March 12th 10/9c.</strong>
+              <span className="announcement">
+                {data.datoCmsIndex.announcement}
+              </span>
             </p>
             <p className="social">
               <a href="https://twitter.com/videosafterdark">
@@ -55,7 +61,7 @@ function IndexPage({ data }) {
             </p>
           </div>
           <img
-            className="bob slide-top"
+            className="bob fade-in"
             src={require('../imgs/bob1.png')}
             alt="Bob Saget"
           />
@@ -85,7 +91,12 @@ export const query = graphql`
       }
       launch
       title
-      body
+      bodyNode {
+        childMarkdownRemark {
+          html
+        }
+      }
+      announcement
     }
   }
 `;

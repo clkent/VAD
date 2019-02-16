@@ -290,8 +290,8 @@ export const LandingContainer = styled.div`
         position: relative;
         z-index: 1;
         max-width: 500px;
-        right: -15px;
-        margin-top: 25px;
+        margin-top: 35px;
+        transform: translateX(0px);
       }
 
       /*ANIMATIONS*/
@@ -346,6 +346,12 @@ export const LandingContainer = styled.div`
     @media (min-width: 1960px) {
       div {
         margin-left: 38%;
+        text-align: center;
+        max-width: 680px;
+      }
+
+      div.noset {
+        margin-left: 0;
       }
     }
   }

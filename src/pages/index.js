@@ -40,6 +40,7 @@ function IndexPage({ data }) {
           <div>
             <h1>{data.datoCmsIndex.title}</h1>
             <div
+              className="noset"
               dangerouslySetInnerHTML={{
                 __html: data.datoCmsIndex.bodyNode.childMarkdownRemark.html
               }}

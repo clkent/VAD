@@ -40,7 +40,16 @@ function IndexPage({ data }) {
             <p class="warning">{data.datoCmsIndex.uploadWarning}</p>
           </div>
         </main>
-
+{/*
+        <section className="video">
+          <video width="100%" controls>
+            <source id='mp4' src="http://media.w3.org/2010/05/sintel/trailer.mp4" type='video/mp4'/>
+            <source id='webm' src="http://media.w3.org/2010/05/sintel/trailer.webm" type='video/webm'/>
+            <source id='ogv' src="http://media.w3.org/2010/05/sintel/trailer.ogv" type='video/ogg'/>
+            Your browser does not support the video tag.
+          </video>
+        </section>
+*/}
         <section className="details">
           <div>
             <h1>{data.datoCmsIndex.title}</h1>

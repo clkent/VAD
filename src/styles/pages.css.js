@@ -63,7 +63,7 @@ export const PageContainer = styled.div`
   }
 
   div.uploader {
-    margin-top: 20px;
+    margin: 20px -30px 0;
   }
 
   @media (min-width: 380px) {

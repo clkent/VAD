@@ -99,7 +99,7 @@ export const LandingContainer = styled.div`
       a.btn {
         background: #000;
         padding: 15px 30px;
-        border-radius: 10px;
+        border-radius: 100px;
         border: 3px solid #fff;
         opacity: 0.9;
         box-shadow: 5px 5px 15px #000;
@@ -107,12 +107,12 @@ export const LandingContainer = styled.div`
         text-decoration: none;
         text-transform: uppercase;
         color: white;
-        letter-spacing: 1px;
+        letter-spacing: 2px;
         cursor: pointer;
-        font-weight: 600;
-        font-size: 1.125em
-        
+
+        margin-top: 40px;
       }
+      
       /* ANIMATIONS */
 
       .fade-in {
@@ -236,6 +236,18 @@ export const LandingContainer = styled.div`
       }
     }
   }
+  
+  .video {
+    border-top: 1px solid #000;
+    background: url(${noise});
+  }
+  
+  .video video {
+    max-width: 980px;
+    display: block;
+    margin: 0 auto;
+  }
+  
 
   .details {
     width: 100vw;
@@ -306,7 +318,6 @@ export const LandingContainer = styled.div`
     }
 
     @media (min-width: 380px) {
-      border-top: 1px solid #000;
       background: url(${noise});
 
       div {

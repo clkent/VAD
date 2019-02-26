@@ -31,7 +31,7 @@ export const LandingContainer = styled.div`
 
       .abc {
         max-width: 68px;
-        margin-bottom: 45px;
+        margin-bottom: 5px;
         margin-top: 50px;
       }
 
@@ -66,11 +66,40 @@ export const LandingContainer = styled.div`
           flicker 10s linear infinite both,
           fade-in 4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
       }
+      
+      p {
+        color: white;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.1em;
+        letter-spacing: 1px;
+        text-align: center;
+
+        max-width: 420px;
+        margin-top: 10px;
+        text-transform: none;
+        
+        text-shadow:0 0 80px #000, 0 0 40px #000, 0 0 20px #000, 0 0 20px #000, 0 0 20px #000;
+        
+        // -webkit-animation: neon 1.5s ease-in-out infinite alternate,
+        //   flicker 10s linear infinite both,
+        //   fade-in 4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+        // -moz-animation: neon 1.5s ease-in-out infinite alternate,
+        //   flicker 10s linear infinite both,
+        //   fade-in 4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+        // animation: neon 1.5s ease-in-out infinite alternate,
+        //   flicker 10s linear infinite both,
+        //   fade-in 4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+      }
+      p.warning {
+        text-transform: uppercase;
+        margin-top: 40px;
+        font-weight: 600;
+      }
 
       a.btn {
         background: #000;
         padding: 15px 30px;
-        border-radius: 100px;
+        border-radius: 10px;
         border: 3px solid #fff;
         opacity: 0.9;
         box-shadow: 5px 5px 15px #000;
@@ -78,10 +107,11 @@ export const LandingContainer = styled.div`
         text-decoration: none;
         text-transform: uppercase;
         color: white;
-        letter-spacing: 2px;
+        letter-spacing: 1px;
         cursor: pointer;
-
-        margin-top: 40px;
+        font-weight: 600;
+        font-size: 1.125em
+        
       }
       /* ANIMATIONS */
 

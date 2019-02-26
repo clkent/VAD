@@ -1,5 +1,5 @@
 import React from 'react';
-// import { Link } from 'gatsby';
+import { Link } from 'gatsby';
 import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
@@ -19,20 +19,25 @@ function IndexPage({ data }) {
           <Img className="cover" fluid={data.datoCmsIndex.cover.fluid} />
           <MainNav />
           <div className="main-info drop-down">
+            <img
+              className="abc fade-in"
+              src={require('../imgs/abc_vector.png')}
+              alt="ABC logo"
+            />
             <Img
               className="logo fade-in"
               fluid={data.datoCmsIndex.logo.fluid}
               alt="Videos After Dark Logo"
             />
             <h2>{data.datoCmsIndex.launch}</h2>
-            <img
-              className="abc fade-in"
-              src={require('../imgs/abc_vector.png')}
-              alt="ABC logo"
+            <div dangerouslySetInnerHTML={{
+                 __html: data.datoCmsIndex.uploadDescriptionNode.childMarkdownRemark.html
+               }}
             />
-            {/* <Link className="btn" to="/upload">
+            <Link className="btn" to="/upload">
               Submit a Video
-            </Link> */}
+            </Link>
+            <p class="warning">{data.datoCmsIndex.uploadWarning}</p>
           </div>
         </main>
 
@@ -92,6 +97,12 @@ export const query = graphql`
       }
       launch
       title
+      uploadDescriptionNode {
+       childMarkdownRemark {
+          html
+        }
+      }
+      uploadWarning
       bodyNode {
         childMarkdownRemark {
           html

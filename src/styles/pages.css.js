@@ -57,7 +57,7 @@ export const PageContainer = styled.div`
   }
 
   div.uploader-content {
-    height: 100vh;
+    // height: 100vh;
     max-width: 866px;
     padding: 25px;
   }
@@ -73,7 +73,7 @@ export const PageContainer = styled.div`
       margin: 3% auto;
     }
     div.uploader-content {
-      height: 100vh;
+      // height: 100vh;
     }
   }
 `;

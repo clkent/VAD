@@ -30,26 +30,42 @@ function IndexPage({ data }) {
               alt="Videos After Dark Logo"
             />
             <h2>{data.datoCmsIndex.launch}</h2>
-            <div dangerouslySetInnerHTML={{
-                 __html: data.datoCmsIndex.uploadDescriptionNode.childMarkdownRemark.html
-               }}
-            />
-            <Link className="btn" to="/upload">
+            <Link className="btn fade-in" to="/upload">
               Submit a Video
             </Link>
-            <p class="warning">{data.datoCmsIndex.uploadWarning}</p>
           </div>
         </main>
-{/*
-        <section className="video">
+        <section className="submit-details">
+          <div
+            dangerouslySetInnerHTML={{
+              __html:
+                data.datoCmsIndex.uploadDescriptionNode.childMarkdownRemark.html
+            }}
+          />
+          <p className="warning">{data.datoCmsIndex.uploadWarning}</p>
+        </section>
+
+        {/* <section className="video">
           <video width="100%" controls>
-            <source id='mp4' src="http://media.w3.org/2010/05/sintel/trailer.mp4" type='video/mp4'/>
-            <source id='webm' src="http://media.w3.org/2010/05/sintel/trailer.webm" type='video/webm'/>
-            <source id='ogv' src="http://media.w3.org/2010/05/sintel/trailer.ogv" type='video/ogg'/>
+            <source
+              id="mp4"
+              src="http://media.w3.org/2010/05/sintel/trailer.mp4"
+              type="video/mp4"
+            />
+            <source
+              id="webm"
+              src="http://media.w3.org/2010/05/sintel/trailer.webm"
+              type="video/webm"
+            />
+            <source
+              id="ogv"
+              src="http://media.w3.org/2010/05/sintel/trailer.ogv"
+              type="video/ogg"
+            />
             Your browser does not support the video tag.
           </video>
-        </section>
-*/}
+        </section> */}
+
         <section className="details">
           <div>
             <h1>{data.datoCmsIndex.title}</h1>
@@ -65,12 +81,19 @@ function IndexPage({ data }) {
               </span>
             </p>
             <p className="social">
+              Follow us on{' '}
               <a href="https://twitter.com/videosafterdark">
-                Follow us on{' '}
                 <img
                   className="twitter fade-in"
                   src={require('../imgs/Twitter_Social_Icon_Circle_Color.png')}
-                  alt="ABC logo"
+                  alt="twitter icon"
+                />
+              </a>
+              <a href="https://www.instagram.com/videosafterdark/">
+                <img
+                  className="ig fade-in"
+                  src={require('../imgs/IG.png')}
+                  alt="IG icon"
                 />
               </a>
             </p>
@@ -100,14 +123,14 @@ export const query = graphql`
         }
       }
       logo {
-        fluid(maxWidth: 450, imgixParams: { fm: "png", auto: "compress" }) {
+        fluid(maxWidth: 350, imgixParams: { fm: "png", auto: "compress" }) {
           src
         }
       }
       launch
       title
       uploadDescriptionNode {
-       childMarkdownRemark {
+        childMarkdownRemark {
           html
         }
       }

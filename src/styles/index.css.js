@@ -11,7 +11,7 @@ export const LandingContainer = styled.div`
 
   .top {
     font-family: 'Oswald', sans-serif;
-    height: 100vh;
+    height: 100%;
 
     .cover {
       position: fixed !important;
@@ -23,15 +23,16 @@ export const LandingContainer = styled.div`
     }
 
     div.main-info {
-      height: 100vh;
+      height: 100%;
+      margin-bottom: 111px;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
 
       .abc {
-        max-width: 68px;
-        margin-bottom: 5px;
+        max-width: 60px;
+        margin-bottom: 0px;
         margin-top: 50px;
       }
 
@@ -43,13 +44,17 @@ export const LandingContainer = styled.div`
 
         -webkit-filter: drop-shadow(2px 2px 5px #000);
         filter: drop-shadow(2px 2px 5px #000);
+
+        img {
+          height: auto;
+        }
       }
 
       h2 {
         color: white;
         text-transform: uppercase;
         font-family: 'Oswald', sans-serif;
-        font-size: 1.6em;
+        font-size: 1.25em;
         letter-spacing: 2px;
         text-align: center;
 
@@ -66,20 +71,24 @@ export const LandingContainer = styled.div`
           flicker 10s linear infinite both,
           fade-in 4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
       }
-      
+
       p {
         color: white;
         font-family: 'Roboto', sans-serif;
-        font-size: 1.1em;
+        font-size: 1.2em;
         letter-spacing: 1px;
+        line-height: 1em;
         text-align: center;
 
-        max-width: 420px;
+        max-width: 580px;
         margin-top: 10px;
         text-transform: none;
-        
-        text-shadow:0 0 80px #000, 0 0 40px #000, 0 0 20px #000, 0 0 20px #000, 0 0 20px #000;
-        
+        padding: 0px;
+
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.75), 0 0 40px rgba(0, 0, 0, 0.75),
+          0 0 20px rgba(0, 0, 0, 0.75), 0 0 20px rgba(0, 0, 0, 0.75),
+          0 0 20px rgba(0, 0, 0, 0.75);
+
         // -webkit-animation: neon 1.5s ease-in-out infinite alternate,
         //   flicker 10s linear infinite both,
         //   fade-in 4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
@@ -89,11 +98,6 @@ export const LandingContainer = styled.div`
         // animation: neon 1.5s ease-in-out infinite alternate,
         //   flicker 10s linear infinite both,
         //   fade-in 4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-      }
-      p.warning {
-        text-transform: uppercase;
-        margin-top: 40px;
-        font-weight: 600;
       }
 
       a.btn {
@@ -112,7 +116,7 @@ export const LandingContainer = styled.div`
 
         margin-top: 40px;
       }
-      
+
       /* ANIMATIONS */
 
       .fade-in {
@@ -223,31 +227,71 @@ export const LandingContainer = styled.div`
   @media (min-width: 380px) {
     .top {
       div.main-info {
-        .abc {
-          margin-top: 10px;
-        }
-
+        height: 85vh;
+        margin-bottom: 60px;
         .logo {
-          width: 450px;
-          height: 310px;
+          width: 350px;
+          height: 245px;
           -webkit-filter: drop-shadow(10px 10px 15px #000);
           filter: drop-shadow(10px 10px 15px #000);
+
+          img {
+            height: auto !important;
+          }
         }
       }
     }
   }
-  
+
+  .submit-details {
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 20px;
+    border-bottom: 1px solid #1f1f1f;
+
+    background: url(${noise});
+    color: #fff;
+
+    text-align: center;
+
+    strong {
+      text-transform: uppercase;
+      font-family: 'Oswald', sans-serif;
+      letter-spacing: 1px;
+    }
+
+    div {
+      p {
+        padding: 0;
+        margin: 0;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.1em;
+        line-height: 1.5em;
+      }
+    }
+    p.warning {
+      margin-top: 10px;
+      font-size: 0.7em;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-family: 'Oswald', sans-serif;
+    }
+  }
+
   .video {
-    border-top: 1px solid #000;
+    padding: 80px 20px 60px 20px;
     background: url(${noise});
   }
-  
+
   .video video {
     max-width: 980px;
     display: block;
     margin: 0 auto;
   }
-  
 
   .details {
     width: 100vw;
@@ -284,18 +328,24 @@ export const LandingContainer = styled.div`
         position: relative;
         bottom: 0px;
         margin: 0;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-family: 'Oswald', sans-serif;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: #fff;
+        font-size: 1em;
         a {
-          text-transform: uppercase;
-          text-decoration: none;
-          font-family: 'Oswald', sans-serif;
-          letter-spacing: 1px;
-          text-transform: uppercase;
-          color: #fff;
-          font-size: 0.95em;
-
           .twitter {
-            max-width: 22px;
-            padding: 0 2px;
+            max-width: 26px;
+            padding: 0 4px;
+            position: relative;
+            top: 5px;
+          }
+          .ig {
+            max-width: 38px;
+            position: relative;
+            top: 10px;
           }
         }
       }
@@ -386,7 +436,7 @@ export const LandingContainer = styled.div`
 
     @media (min-width: 1960px) {
       div {
-        margin-left: 38%;
+        margin-left: 33%;
         text-align: center;
         max-width: 680px;
       }

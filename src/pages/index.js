@@ -10,6 +10,7 @@ import MainNav from '../components/mainNav';
 
 import Footer from '../components/footer';
 
+
 function IndexPage({ data }) {
   return (
     <>

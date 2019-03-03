@@ -11,7 +11,7 @@ export const LandingContainer = styled.div`
 
   .top {
     font-family: 'Oswald', sans-serif;
-    height: 100%;
+    height: 100vh;
 
     .cover {
       position: fixed !important;
@@ -23,14 +23,12 @@ export const LandingContainer = styled.div`
     }
 
     div.main-info {
-      height: 100%;
-      margin-top: 55px;
-      margin-bottom: 55px;
+      height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-
+    
       .abc {
         max-width: 68px;
         margin-bottom: 45px;
@@ -215,9 +213,6 @@ export const LandingContainer = styled.div`
         .abc {
           margin-top: 10px;
         }
-        height: 85vh;
-        margin-top: 40px;
-        margin-bottom: 20px;
         .logo {
           width: 450px;
           height: 310px;

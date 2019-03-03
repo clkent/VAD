@@ -54,7 +54,7 @@ export const LandingContainer = styled.div`
         color: white;
         text-transform: uppercase;
         font-family: 'Oswald', sans-serif;
-        font-size: 1.25em;
+        font-size: 1.6em;
         letter-spacing: 2px;
         text-align: center;
 
@@ -100,22 +100,6 @@ export const LandingContainer = styled.div`
         //   fade-in 4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
       }
 
-      a.btn {
-        background: #000;
-        padding: 15px 30px;
-        border-radius: 100px;
-        border: 3px solid #fff;
-        opacity: 0.9;
-        box-shadow: 5px 5px 15px #000;
-
-        text-decoration: none;
-        text-transform: uppercase;
-        color: white;
-        letter-spacing: 2px;
-        cursor: pointer;
-
-        margin-top: 40px;
-      }
 
       /* ANIMATIONS */
 
@@ -230,8 +214,8 @@ export const LandingContainer = styled.div`
         height: 85vh;
         margin-bottom: 60px;
         .logo {
-          width: 350px;
-          height: 245px;
+          width: 450px;
+          height: 310px;
           -webkit-filter: drop-shadow(10px 10px 15px #000);
           filter: drop-shadow(10px 10px 15px #000);
 
@@ -280,6 +264,27 @@ export const LandingContainer = styled.div`
       font-weight: 600;
       font-family: 'Oswald', sans-serif;
     }
+
+
+      a.btn.submit-video {
+        background: #000;
+        padding: 15px 30px;
+        border-radius: 100px;
+        border: 3px solid #fff;
+        opacity: 0.9;
+        box-shadow: 5px 5px 15px #000;
+        font-family: Oswald, sans-serif;
+
+        text-decoration: none;
+        text-transform: uppercase;
+        color: white;
+        letter-spacing: 2px;
+        cursor: pointer;
+
+        margin: 20px 0;
+      }
+
+
   }
 
   .video {

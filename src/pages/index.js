@@ -19,20 +19,19 @@ function IndexPage({ data }) {
           <Img className="cover" fluid={data.datoCmsIndex.cover.fluid} />
           <MainNav />
           <div className="main-info drop-down">
-            <img
-              className="abc fade-in"
-              src={require('../imgs/abc_vector.png')}
-              alt="ABC logo"
-            />
+            
             <Img
               className="logo fade-in"
               fluid={data.datoCmsIndex.logo.fluid}
               alt="Videos After Dark Logo"
             />
             <h2>{data.datoCmsIndex.launch}</h2>
-            <Link className="btn fade-in" to="/upload">
-              Submit a Video
-            </Link>
+            <img
+              className="abc fade-in"
+              src={require('../imgs/abc_vector.png')}
+              alt="ABC logo"
+            />
+
           </div>
         </main>
         <section className="submit-details">
@@ -42,6 +41,9 @@ function IndexPage({ data }) {
                 data.datoCmsIndex.uploadDescriptionNode.childMarkdownRemark.html
             }}
           />
+           <Link className="btn fade-in submit-video" to="/upload">
+              Submit a Video
+            </Link>
           <p className="warning">{data.datoCmsIndex.uploadWarning}</p>
         </section>
 

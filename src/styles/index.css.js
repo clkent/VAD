@@ -24,7 +24,8 @@ export const LandingContainer = styled.div`
 
     div.main-info {
       height: 100%;
-      margin-bottom: 111px;
+      margin-top: 55px;
+      margin-bottom: 55px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -215,6 +216,7 @@ export const LandingContainer = styled.div`
           margin-top: 10px;
         }
         height: 85vh;
+        margin-top: 0;
         margin-bottom: 60px;
         .logo {
           width: 450px;

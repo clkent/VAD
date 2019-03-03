@@ -31,8 +31,8 @@ export const LandingContainer = styled.div`
       justify-content: center;
 
       .abc {
-        max-width: 60px;
-        margin-bottom: 0px;
+        max-width: 68px;
+        margin-bottom: 45px;
         margin-top: 50px;
       }
 
@@ -211,6 +211,9 @@ export const LandingContainer = styled.div`
   @media (min-width: 380px) {
     .top {
       div.main-info {
+        .abc {
+          margin-top: 10px;
+        }
         height: 85vh;
         margin-bottom: 60px;
         .logo {

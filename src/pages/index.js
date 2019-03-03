@@ -1,5 +1,5 @@
 import React from 'react';
-// import { Link } from 'gatsby';
+import { Link } from 'gatsby';
 import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
@@ -20,6 +20,7 @@ function IndexPage({ data }) {
           <Img className="cover" fluid={data.datoCmsIndex.cover.fluid} />
           <MainNav />
           <div className="main-info drop-down">
+            
             <Img
               className="logo fade-in"
               fluid={data.datoCmsIndex.logo.fluid}
@@ -31,11 +32,42 @@ function IndexPage({ data }) {
               src={require('../imgs/abc_vector.png')}
               alt="ABC logo"
             />
-            {/* <Link className="btn" to="/upload">
-              Submit a Video
-            </Link> */}
+
           </div>
         </main>
+        <section className="submit-details">
+          <div
+            dangerouslySetInnerHTML={{
+              __html:
+                data.datoCmsIndex.uploadDescriptionNode.childMarkdownRemark.html
+            }}
+          />
+           <Link className="btn fade-in submit-video" to="/upload">
+              Submit a Video
+            </Link>
+          <p className="warning">{data.datoCmsIndex.uploadWarning}</p>
+        </section>
+
+        {/* <section className="video">
+          <video width="100%" controls>
+            <source
+              id="mp4"
+              src="http://media.w3.org/2010/05/sintel/trailer.mp4"
+              type="video/mp4"
+            />
+            <source
+              id="webm"
+              src="http://media.w3.org/2010/05/sintel/trailer.webm"
+              type="video/webm"
+            />
+            <source
+              id="ogv"
+              src="http://media.w3.org/2010/05/sintel/trailer.ogv"
+              type="video/ogg"
+            />
+            Your browser does not support the video tag.
+          </video>
+        </section> */}
 
         <section className="details">
           <div>
@@ -52,12 +84,19 @@ function IndexPage({ data }) {
               </span>
             </p>
             <p className="social">
+              Follow us on{' '}
               <a href="https://twitter.com/videosafterdark">
-                Follow us on{' '}
                 <img
                   className="twitter fade-in"
                   src={require('../imgs/Twitter_Social_Icon_Circle_Color.png')}
-                  alt="ABC logo"
+                  alt="twitter icon"
+                />
+              </a>
+              <a href="https://www.instagram.com/videosafterdark/">
+                <img
+                  className="ig fade-in"
+                  src={require('../imgs/IG.png')}
+                  alt="IG icon"
                 />
               </a>
             </p>
@@ -87,12 +126,18 @@ export const query = graphql`
         }
       }
       logo {
-        fluid(maxWidth: 450, imgixParams: { fm: "png", auto: "compress" }) {
+        fluid(maxWidth: 350, imgixParams: { fm: "png", auto: "compress" }) {
           src
         }
       }
       launch
       title
+      uploadDescriptionNode {
+        childMarkdownRemark {
+          html
+        }
+      }
+      uploadWarning
       bodyNode {
         childMarkdownRemark {
           html

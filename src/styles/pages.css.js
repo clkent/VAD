@@ -8,6 +8,10 @@ import noise from '../imgs/noise.png';
 export const PageContainer = styled.div`
   color: #fff;
 
+
+  min-height: calc(100vh - 80px);
+
+
   .cover {
     position: fixed !important;
     left: 0;
@@ -57,13 +61,13 @@ export const PageContainer = styled.div`
   }
 
   div.uploader-content {
-    height: 100vh;
+    // height: 100vh;
     max-width: 866px;
     padding: 25px;
   }
 
   div.uploader {
-    margin-top: 20px;
+    margin: 20px -30px 0;
   }
 
   @media (min-width: 380px) {
@@ -73,7 +77,7 @@ export const PageContainer = styled.div`
       margin: 3% auto;
     }
     div.uploader-content {
-      height: 100vh;
+      // height: 100vh;
     }
   }
 `;

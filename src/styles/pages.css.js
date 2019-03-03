@@ -8,6 +8,10 @@ import noise from '../imgs/noise.png';
 export const PageContainer = styled.div`
   color: #fff;
 
+
+  min-height: calc(100vh - 80px);
+
+
   .cover {
     position: fixed !important;
     left: 0;

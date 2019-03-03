@@ -9,6 +9,7 @@ import City from '../imgs/CubeTopDown_h264.jpg';
 import { PageContainer } from '../styles/pages.css';
 import { GlobalStyle } from '../styles/common.css';
 
+import Footer from '../components/footer';
 
 class Upload extends React.Component {
 
@@ -71,7 +72,7 @@ class Upload extends React.Component {
             <div className="uploader">
               <Iframe
                 style={uploaderFrame}
-                url="https://afv.com/upload-vad/"
+                url="https://afv.com/upload-vad/upload-vad/"
                 title="uploader"
                 height="100%"
                 minHeight="600px"
@@ -87,6 +88,7 @@ class Upload extends React.Component {
             </div>
           </div>
         </PageContainer>
+          <Footer />
       </>
     );
   }

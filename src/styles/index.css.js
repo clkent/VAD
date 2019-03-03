@@ -40,8 +40,8 @@ export const LandingContainer = styled.div`
         position: relative;
         width: 325px;
         min-height: 210px;
-        margin-top: 15vw;
-
+        margin-top: 30px;
+        
         -webkit-filter: drop-shadow(2px 2px 5px #000);
         filter: drop-shadow(2px 2px 5px #000);
 

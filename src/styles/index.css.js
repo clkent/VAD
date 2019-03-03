@@ -216,8 +216,8 @@ export const LandingContainer = styled.div`
           margin-top: 10px;
         }
         height: 85vh;
-        margin-top: 30px;
-        margin-bottom: 30px;
+        margin-top: 40px;
+        margin-bottom: 20px;
         .logo {
           width: 450px;
           height: 310px;

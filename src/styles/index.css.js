@@ -11,7 +11,7 @@ export const LandingContainer = styled.div`
 
   .top {
     font-family: 'Oswald', sans-serif;
-    height: 100vh;
+    height: 91vh;
 
     .cover {
       position: fixed !important;
@@ -28,7 +28,7 @@ export const LandingContainer = styled.div`
       flex-direction: column;
       align-items: center;
       justify-content: center;
-    
+
       .abc {
         max-width: 68px;
         margin-bottom: 45px;
@@ -40,7 +40,7 @@ export const LandingContainer = styled.div`
         width: 325px;
         min-height: 210px;
         margin-top: 30px;
-        
+
         -webkit-filter: drop-shadow(2px 2px 5px #000);
         filter: drop-shadow(2px 2px 5px #000);
 
@@ -98,7 +98,6 @@ export const LandingContainer = styled.div`
         //   flicker 10s linear infinite both,
         //   fade-in 4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
       }
-
 
       /* ANIMATIONS */
 
@@ -265,26 +264,29 @@ export const LandingContainer = styled.div`
       font-family: 'Oswald', sans-serif;
     }
 
+    a.btn.submit-video {
+      background: #000;
+      padding: 15px 30px;
+      border-radius: 100px;
+      border: 3px solid #fff;
+      opacity: 0.9;
+      box-shadow: 5px 5px 15px #000;
+      font-family: Oswald, sans-serif;
 
-      a.btn.submit-video {
-        background: #000;
-        padding: 15px 30px;
-        border-radius: 100px;
-        border: 3px solid #fff;
-        opacity: 0.9;
-        box-shadow: 5px 5px 15px #000;
-        font-family: Oswald, sans-serif;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: white;
+      letter-spacing: 2px;
+      cursor: pointer;
 
-        text-decoration: none;
-        text-transform: uppercase;
-        color: white;
-        letter-spacing: 2px;
-        cursor: pointer;
+      margin: 20px 0;
+    }
 
-        margin: 20px 0;
-      }
-
-
+    a.btn.submit-video:hover {
+      -webkit-animation: neon 1.5s ease-in-out infinite alternate;
+      -moz-animation: neon 1.5s ease-in-out infinite alternate;
+      animation: neon 1.5s ease-in-out infinite alternate;
+    }
   }
 
   .video {

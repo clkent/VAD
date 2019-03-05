@@ -3,6 +3,9 @@ import { Link } from 'gatsby';
 import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
+import introvidMP4 from '../imgs/introvid.mp4';
+import introvidWEBM from '../imgs/introvid.webm';
+
 import { LandingContainer } from '../styles/index.css';
 import { GlobalStyle } from '../styles/common.css';
 
@@ -20,7 +23,6 @@ function IndexPage({ data }) {
           <Img className="cover" fluid={data.datoCmsIndex.cover.fluid} />
           <MainNav />
           <div className="main-info drop-down">
-            
             <Img
               className="logo fade-in"
               fluid={data.datoCmsIndex.logo.fluid}
@@ -32,7 +34,6 @@ function IndexPage({ data }) {
               src={require('../imgs/abc_vector.png')}
               alt="ABC logo"
             />
-
           </div>
         </main>
         <section className="submit-details">
@@ -42,32 +43,19 @@ function IndexPage({ data }) {
                 data.datoCmsIndex.uploadDescriptionNode.childMarkdownRemark.html
             }}
           />
-           <Link className="btn fade-in submit-video" to="/upload">
-              Submit a Video
-            </Link>
+          <Link className="btn fade-in submit-video" to="/upload">
+            Submit a Video
+          </Link>
           <p className="warning">{data.datoCmsIndex.uploadWarning}</p>
         </section>
 
-        {/* <section className="video">
+        <section className="video">
           <video width="100%" controls>
-            <source
-              id="mp4"
-              src="http://media.w3.org/2010/05/sintel/trailer.mp4"
-              type="video/mp4"
-            />
-            <source
-              id="webm"
-              src="http://media.w3.org/2010/05/sintel/trailer.webm"
-              type="video/webm"
-            />
-            <source
-              id="ogv"
-              src="http://media.w3.org/2010/05/sintel/trailer.ogv"
-              type="video/ogg"
-            />
+            <source id="mp4" src={introvidMP4} type="video/mp4" />
+            <source id="webm" src={introvidWEBM} type="video/webm" />
             Your browser does not support the video tag.
           </video>
-        </section> */}
+        </section>
 
         <section className="details">
           <div>

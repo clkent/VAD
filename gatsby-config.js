@@ -3,7 +3,7 @@ require('dotenv').config();
 
 module.exports = {
   siteMetadata: {
-    title: 'Videos After Dark',
+    title: `Videos After Dark`,
     description:
       'a new comedy reality series hosted by comedian Bob Saget, featuring home videos with an edgier twist. The hits are a little harder, the language a bit saltier, the animals a little less cute, the kids a tad less adorable and the embarrassing moments more revealing. Welcome to the night life. Everything’s funnier AFTER DARK.'
   },

@@ -72,7 +72,7 @@ class Upload extends React.Component {
             <div className="uploader">
               <Iframe
                 style={uploaderFrame}
-                url="https://afvdev.wpengine.com/upload-vad"
+                url="https://afv.com/upload-vad"
                 title="uploader"
                 height="100%"
                 minHeight="600px"
